@@ -1,0 +1,13 @@
+<view>
+  <view class="container">
+    <view>
+      <text>个人信息</text>
+    </view>
+    <view class='row' bindtap='onTop'>
+      <text>已经答过的题</text>
+    </view>
+    <view>
+      <text>重点标记的题</text>
+    </view>
+  </view>
+</view>

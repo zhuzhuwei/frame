@@ -2,22 +2,22 @@
   <view class="container">
 
     <view class='row' bindtap='onTop'>
-      <text>php</text> 
+      <text>PHP</text> 
     </view>
     <view>
-      <text>php</text>
+      <text>MYSQL</text>
     </view>
     <view>
-      <text>php</text>
+      <text>LIUNX</text>
     </view>
     <view>
-      <text>php</text>
+      <text>JAVA</text>
     </view>
     <view>
-      <text>php</text>
+      <text>C</text>
     </view>
     <view>
-      <text>php</text>
+      <text>C++</text>
     </view>
     
 

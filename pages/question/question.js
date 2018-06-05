@@ -12,9 +12,41 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var searchUrl = 'http://192.144.129.152';
+    this.getMovieListData(searchUrl);
   },
 
+  onMoreTap: function (event) {
+    var searchUrl = 'http://192.144.129.152?next=1';
+    this.getMovieListData(searchUrl);
+  },
+
+
+  getMovieListData: function (url) {
+    var that = this;
+    wx.request({
+      url: url,
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      header: {
+        "Content-Type": "json"
+      },
+      success: function (res) {
+        console.log(res.data.data.title);
+        console.log(res);
+        var readyData = {};
+        readyData = {
+          title: res.data.data.title,
+          body: res.data.data.body
+        }
+        that.setData(readyData);
+
+      },
+      fail: function (error) {
+        // fail
+        console.log(error)
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
