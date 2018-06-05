@@ -15,6 +15,13 @@ Page({
       url: '../logs/logs'
     })
   },
+  onTop: function (event) {
+    wx.navigateTo({
+      url: '../question/question',
+    })
+
+  },
+
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
