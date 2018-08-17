@@ -16,8 +16,10 @@ Page({
     })
   },
   onTop: function (event) {
+    var postId = event.currentTarget.dataset.postid;
+    console.log(postId);
     wx.navigateTo({
-      url: '../question/question',
+      url: '../question/question?category='+postId,
     })
 
   },
@@ -49,7 +51,42 @@ Page({
         }
       })
     }
+
+    var searchUrl = 'http://kaishi.com/user/get_category';
+    this.getMovieListData(searchUrl);
+
+
+
   },
+
+
+
+  getMovieListData: function (url) {
+    var that = this;
+    wx.request({
+      url: url,
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      header: {
+        "Content-Type": "json"
+      },
+      success: function (res) {
+
+        console.log(res);
+        var readyData = {};
+        readyData = {
+          name: res.data.data,
+        }
+        that.setData(readyData);
+
+      },
+      fail: function (error) {
+        // fail
+        console.log(error)
+      }
+    })
+  },
+
+
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

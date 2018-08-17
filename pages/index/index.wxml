@@ -1,25 +1,10 @@
 <view>
   <view class="container">
-
-    <view class='row' bindtap='onTop'>
-      <text>PHP</text> 
-    </view>
-    <view>
-      <text>MYSQL</text>
-    </view>
-    <view>
-      <text>LIUNX</text>
-    </view>
-    <view>
-      <text>JAVA</text>
-    </view>
-    <view>
-      <text>C</text>
-    </view>
-    <view>
-      <text>C++</text>
-    </view>
-    
-
+    <block wx:for="{{name}}" wx:for-item="item" wx:for-index="idx">
+        <!--//template-->
+        <view catchtap="onTop" data-postId="{{item.id}}">
+             <text>{{item.name}}</text>
+        </view>
+    </block>
   </view>
 </view>

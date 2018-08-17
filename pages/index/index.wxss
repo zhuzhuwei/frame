@@ -32,6 +32,7 @@ page{
   padding-left: 30rpx;
   background-color:	#F0F0F0;
   padding-right: 30rpx;
+  padding-top: 30rpx;
 
 }
 .container view{
@@ -41,4 +42,6 @@ page{
   padding-bottom: 20rpx;
   width: 100%;
   align-content: center;
+  border-radius:25px;
+  text-align: center;
 }

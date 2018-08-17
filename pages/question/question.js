@@ -12,12 +12,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var searchUrl = 'http://192.144.129.152';
+    
+    console.log(options);
+
+    var category = options.category;
+
+    console.log(category);
+    var category = options.category;
+    var searchUrl = 'http://kaishi.com/user/get_by_category_id_question?category='+category;
     this.getMovieListData(searchUrl);
   },
 
   onMoreTap: function (event) {
-    var searchUrl = 'http://192.144.129.152?next=1';
+
+    console.log(event.target.dataset);
+
+    var categoryid = event.target.dataset.categoryid;
+    var nextid = event.target.dataset.nextid;
+    var searchUrl = 'http://kaishi.com/user/get_by_category_id_question?category=' + categoryid + "&nextid=" + nextid;
     this.getMovieListData(searchUrl);
   },
 
@@ -31,12 +43,13 @@ Page({
         "Content-Type": "json"
       },
       success: function (res) {
-        console.log(res.data.data.title);
         console.log(res);
         var readyData = {};
         readyData = {
           title: res.data.data.title,
-          body: res.data.data.body
+          body: res.data.data.body,
+          next: res.data.data.next,
+          category: res.data.data.category
         }
         that.setData(readyData);
 

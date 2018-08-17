@@ -9,6 +9,6 @@
   </view>
   <text class="detail">{{body}}</text>
   <view class='button_dibu'>
-    <button catchtap="onMoreTap">下一题</button>
+    <button catchtap="onMoreTap" data-nextId="{{next}}" data-categoryId="{{category}}">下一题</button>
   </view>
 </view>
