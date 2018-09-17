@@ -1,5 +1,10 @@
 // pages/question/question.js
+var util = require('../../utils/util.js');
+var url = util.getBaseUrl();
+
 Page({
+
+
 
   /**
    * 页面的初始数据
@@ -7,6 +12,8 @@ Page({
   data: {
   
   },
+
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -19,7 +26,7 @@ Page({
 
     console.log(category);
     var category = options.category;
-    var searchUrl = 'https://www.cxymst.com/user/get_by_category_id_question?category='+category;
+    var searchUrl = url+'/user/get_by_category_id_question?category='+category;
     this.getMovieListData(searchUrl);
   },
 
@@ -29,7 +36,7 @@ Page({
 
     var categoryid = event.target.dataset.categoryid;
     var nextid = event.target.dataset.nextid;
-    var searchUrl = 'https://www.cxymst.com/user/get_by_category_id_question?category=' + categoryid + "&nextid=" + nextid;
+    var searchUrl = url+'/user/get_by_category_id_question?category=' + categoryid + "&nextid=" + nextid;
     this.getMovieListData(searchUrl);
   },
 

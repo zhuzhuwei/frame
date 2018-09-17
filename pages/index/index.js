@@ -1,7 +1,8 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+var util = require('../../utils/util.js'); 
+var url = util.getBaseUrl();
 Page({
   data: {
     motto: 'Hello World',
@@ -52,7 +53,7 @@ Page({
       })
     }
 
-    var searchUrl = 'https://www.cxymst.com/user/get_category';
+    var searchUrl = url+'/user/get_category';
     this.getMovieListData(searchUrl);
 
 

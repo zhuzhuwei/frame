@@ -18,6 +18,12 @@ module.exports = {
   formatTime: formatTime
 }
 
+var rootUrl = 'https://www.cxymst.com';
+
+function getBaseUrl(n) {
+  return rootUrl;
+}  
+
 
 function convertToStarsArray(stars) {
   var num = stars.toString().substring(0, 1);
@@ -73,5 +79,6 @@ module.exports = {
   convertToStarsArray: convertToStarsArray,
   http: http,
   convertToCastString: convertToCastString,
-  convertToCastInfos: convertToCastInfos
+  convertToCastInfos: convertToCastInfos,
+  getBaseUrl: getBaseUrl
 }
