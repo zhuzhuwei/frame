@@ -19,7 +19,7 @@ Page({
 
     console.log(category);
     var category = options.category;
-    var searchUrl = 'http://kaishi.com/user/get_by_category_id_question?category='+category;
+    var searchUrl = 'https://www.cxymst.com/user/get_by_category_id_question?category='+category;
     this.getMovieListData(searchUrl);
   },
 
@@ -29,7 +29,7 @@ Page({
 
     var categoryid = event.target.dataset.categoryid;
     var nextid = event.target.dataset.nextid;
-    var searchUrl = 'http://kaishi.com/user/get_by_category_id_question?category=' + categoryid + "&nextid=" + nextid;
+    var searchUrl = 'https://www.cxymst.com/user/get_by_category_id_question?category=' + categoryid + "&nextid=" + nextid;
     this.getMovieListData(searchUrl);
   },
 

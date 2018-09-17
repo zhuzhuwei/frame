@@ -52,7 +52,7 @@ Page({
       })
     }
 
-    var searchUrl = 'http://kaishi.com/user/get_category';
+    var searchUrl = 'https://www.cxymst.com/user/get_category';
     this.getMovieListData(searchUrl);
 
 
