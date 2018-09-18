@@ -1,6 +1,7 @@
 <!--先静后动，先样式再数据-->
 <view class="container">
   <text class="title">{{title}}</text>
+
   <view class="tool">
     <view class="circle-img share-img">
       <text class="share-img"></text> 
@@ -8,7 +9,17 @@
     <view class="horizon"></view>
   </view>
   <text class="detail">{{body}}</text>
-  <view class='button_dibu'>
-    <button catchtap="onMoreTap" data-nextId="{{next}}" data-categoryId="{{category}}">下一题</button>
-  </view>
+ 
+
 </view>
+
+<navigator url="/pages/info/add">
+  <view class='button_dibu'>
+    <button catchtap="onMoreTap" data-nextId="{{next}}" data-categoryId="{{category}}">next</button>
+  </view>
+</navigator>
+<navigator url="/pages/info/add">
+    <view class="add" bindtap="add">
+    <image src="/images/adddy.png"></image>
+    </view>
+</navigator>

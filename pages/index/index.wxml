@@ -2,9 +2,10 @@
   <view class="container">
     <block wx:for="{{name}}" wx:for-item="item" wx:for-index="idx">
         <!--//template-->
-        <view catchtap="onTop" data-postId="{{item.id}}">
+        <view  catchtap="onTop" data-postId="{{item.id}}">
              <text>{{item.name}}</text>
         </view>
     </block>
   </view>
 </view>
+

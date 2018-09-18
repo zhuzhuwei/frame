@@ -1,6 +1,10 @@
 <view>
   <view class="container">
+<view>
+<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">获取用户信息</button>
+</view>
     <view>
+    <text>{{nickName}}</text>
       <text>个人信息</text>
     </view>
     <view class='row' bindtap='onTop'>

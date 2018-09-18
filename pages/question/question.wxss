@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
 }
+.neirong{
+  /* background-color: #999; */
+}
+
 
 .head-image {
   width: 100%;
@@ -58,7 +62,7 @@
 }
 
 .detail {
-  color: #666;
+  /*color: #666;*/
   margin-left: 30rpx;
   margin-top: 20rpx;
   margin-right: 30rpx;
@@ -66,5 +70,7 @@
   letter-spacing: 2px;
 }
 .button_dibu{
-  margin-top: 80rpx;
+  position: fixed;bottom: 30px;left:30px;
 }
+.add{position: fixed;bottom: 30px;right:30px;}
+.add image{width: 80rpx;height: 80rpx;}

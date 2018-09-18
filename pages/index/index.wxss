@@ -15,7 +15,8 @@
 .userinfo-nickname {
   color: #aaa;
 }
-
+.add{position: fixed;bottom: 30px;right:30px;}
+.add image{width: 80rpx;height: 80rpx;}
 .usermotto {
   margin-top: 200px;
 }

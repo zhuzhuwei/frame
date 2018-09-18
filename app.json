@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/question/question",
     "pages/user/user",
+    "pages/info/add",
     "pages/logs/logs"
   ],
   "window": {
